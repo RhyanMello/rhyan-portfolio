@@ -30,23 +30,25 @@ rhyan-portfolio/
 | Habilidades | `js/main.js`, array `SK` |
 | Telefone e e-mail | `index.html`, seção `#contato` (aparece 2× cada) |
 
-### Trocar a arte dos projetos por imagens reais
+### Trocar ou adicionar um projeto
 
-Cada projeto tem hoje um SVG provisório. Para usar um arquivo real:
+O mural usa colunas com quebra natural, então cada cartaz mantém a proporção
+original — não precisa recortar nada para caber.
 
-1. Coloque a imagem em `assets/` (ex: `assets/festa-neon.jpg`).
-2. No `index.html`, dentro do `<span class="p-art">` daquele projeto, troque o
-   `<svg>...</svg>` inteiro por:
+1. Coloque a arte em `assets/` (ex: `assets/novo-projeto.jpg`), com no máximo
+   1000px de largura e qualidade 80. Isso mantém o site leve.
+2. No `index.html`, duplique um bloco `<button class="proj rv" data-p="N">`,
+   ajuste o `data-p` para o próximo número, troque o `src`, o `alt`, o título,
+   a categoria, a descrição, o ano e as tags.
+3. No `js/main.js`, adicione o objeto correspondente no fim do array `P`,
+   na mesma ordem do `data-p`.
 
-```html
-<img src="assets/festa-neon.jpg" alt="Peças da identidade da Festa Neon" loading="lazy">
-```
+Para os projetos autorais, o processo é o mesmo dentro de `<div class="rail">`.
 
-3. No `css/style.css`, a regra `.p-art svg` também vale para `img` —
-   adicione `img` no seletor: `.p-art svg, .p-art img { ... }`.
-
-⚠️ **Enquanto os projetos forem placeholders, mantenha o aviso "ARTE PROVISÓRIA"
-no `index.html` (`<p class="wip">`).** Só remova depois de colocar trabalho real.
+**Peças conceituais:** SONY DUALSENSE, UTOPIA, OLISE e HEAVEN usam marcas e
+pessoas reais em trabalho de fã ou exercício. Elas estão marcadas como
+conceituais no site — mantenha essa marcação para ninguém confundir com
+trabalho contratado pela marca.
 
 ## Publicar no GitHub Pages
 

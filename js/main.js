@@ -30,40 +30,32 @@
 
   /* ---------- projetos ---------- */
   var P=[
-    {t:'FESTA NEON',y:'2025',c:'Eventos',r:'Identidade e direção de arte',
-     d:'Uma festa universitária que já existia há três edições e nunca teve cara própria. Construí a marca a partir de um único gesto — o traço de luz — e desdobrei em tudo que o público encontra na noite: flyer, ingresso, letreiro de entrada, pulseira e a cobertura de stories.',
-     e:'Marca, kit de flyers (3 formatos), letreiro de entrada, pulseira, 12 peças de social e templates de story.',
-     g:['Identidade','Impresso','Social','Sinalização']},
-    {t:'CAFÉ ÓRBITA',y:'2025',c:'Identidade Visual',r:'Identidade visual completa',
-     d:'Cafeteria de bairro que não queria parecer cafeteria de bairro genérica. Parti de uma restrição: duas cores e uma forma. O símbolo é a órbita do vapor sobre a xícara, que vira padrão, vira selo e vira recorte de embalagem.',
-     e:'Logotipo e variações, paleta, tipografia, padrão gráfico, copo, saco de grão, cardápio e fachada.',
-     g:['Logo','Embalagem','Sistema']},
-    {t:'SUPERVERÃO',y:'2024',c:'Publicidade',r:'Direção de arte e finalização',
-     d:'Campanha sazonal de varejo com prazo curto e muitos formatos. O desafio real não era criar a peça bonita, era criar um sistema que aguentasse trinta desdobramentos sem perder a força do primeiro cartaz.',
-     e:'Conceito, KV, 6 formatos de mídia digital, cartaz A2, wobbler e faixa de gôndola.',
-     g:['Campanha','PDV','Varejo']},
-    {t:'RUÍDO',y:'2025',c:'Design Autoral',r:'Projeto pessoal',
-     d:'Seis pôsteres sobre poluição sonora urbana. Cada um usa a mesma família tipográfica submetida a um tipo de distorção diferente — repetição, corte, sobreposição, ruído, colapso e silêncio. É um estudo sobre até onde a letra aguenta ser maltratada e ainda comunicar.',
-     e:'Série de 6 pôsteres A2, versão digital animada e caderno de processo.',
-     g:['Pôster','Tipografia','Experimental']},
-    {t:'PADARIA DA ESQUINA',y:'2024',c:'Social Media',r:'Design e planejamento visual',
-     d:'Um mês de conteúdo para uma padaria que fotografava tudo no celular, sem estúdio. Em vez de esconder isso, construí uma grade de feed que usa a foto crua como material — recorte duro, cor chapada por cima e tipografia grande.',
-     e:'Grade de feed de 30 dias, 8 templates editáveis de story e guia rápido de uso.',
-     g:['Feed','Templates','Fotografia']},
-    {t:'MOTOCLUBE 77',y:'2024',c:'Identidade Visual',r:'Emblema e aplicações',
-     d:'Restrição dura desde o começo: uma cor, uma forma, tudo tinha que virar bordado. Isso matou qualquer degradê, sombra ou detalhe fino e obrigou o desenho a funcionar por silhueta — que é exatamente onde um emblema deve funcionar.',
-     e:'Emblema principal, versão reduzida, patch bordado, adesivo, camiseta e bandeira.',
-     g:['Emblema','Bordado','Merch']},
-    {t:'LIGA DE VERÃO',y:'2026',c:'Direção de Arte',r:'Direção de arte e sistema visual',
-     d:'Torneio esportivo amador com oito times e nenhum orçamento de produção. O sistema foi desenhado para ser montado por qualquer pessoa: uma numeração própria, uma paleta por time e um conjunto de placares que o organizador preenche no celular.',
-     e:'Numeração tipográfica, paleta por time, uniforme, placar animado, capa de transmissão e cartaz de rodada.',
-     g:['Sistema','Esporte','Motion','Tipografia']}
+    {t:'EPA 2025',y:'2025',c:'Direção de Arte',r:'Direção de arte e cartaz',
+     d:'Cartaz do Encontro de Projetos Acadêmicos do curso de Desenvolvimento de Sistemas. O conceito saiu da própria chamada do evento — "uma viagem ao universo de uma outra perspectiva" — então a peça sobrepõe carta celeste, diagrama renascentista e um estouro de luz no centro. O Homem Vitruviano ocupa o lugar do zero em 2025, que é o detalhe que amarra o tema do curso ao tema da imagem.',
+     e:'Cartaz de divulgação e versão adaptada para stories, com data, local e chamada.',
+     g:['Evento','Cartaz','Tipografia','Composição']},
+    {t:'ETEC SALES GOMES 90 ANOS',y:'2025',c:'Eventos',r:'Design e composição',
+     d:'Divulgação dos 90 anos da escola, feita pelo 1º Desenvolvimento de Sistemas. Como o assunto é história, a peça foi montada como um álbum de recordação em vez de um cartaz institucional: papel rasgado, fita crepe, carimbo de correio e fotos de arquivo da própria escola coladas sobre um fundo terroso.',
+     e:'Arte vertical para stories com data, sala e chamada de portas abertas.',
+     g:['Evento','Colagem','Institucional']},
+    {t:'DOE 1 LITRO DE LEITE',y:'2025',c:'Publicidade',r:'Design e redação da peça',
+     d:'Anúncio da campanha de arrecadação do 3º MTEC-DS em parceria com o Supermercado Marcon. A tipografia pesada e inclinada ocupa quase toda a peça para funcionar de longe, dentro do mercado. A informação que mais gera erro na doação — a validade do leite — foi tirada do texto corrido e jogada numa tarja vermelha atravessada, junto com uma seta apontando para ela.',
+     e:'Anúncio para ponto de venda e adaptação para redes sociais.',
+     g:['Campanha','Social','Tipografia','PDV']},
+    {t:'CORUJÃO 2026',y:'2026',c:'Publicidade',r:'Direção de arte e diagramação',
+     d:'Segunda peça da campanha de doação de leite, agora para o Corujão 2026. A direção é mais limpa que a da peça anterior, de propósito: tipografia de madeira em caixa alta ocupando o topo, o produto na mão como prova concreta do que se pede, e QR code do PIX no canto para quem prefere doar em dinheiro em vez de carregar caixa.',
+     e:'Cartaz vertical com QR de PIX, texto de orientação e selo da turma.',
+     g:['Campanha','Social','Cartaz']},
+    {t:'SONY DUALSENSE',y:'2025',c:'Publicidade',r:'Peça conceitual — não é material oficial da Sony',
+     d:'Exercício de publicidade de produto com uma ideia só, executada até o fim: o O de SONY vira o corpo do controle e os dois DualSense atravessam a letra como se estivessem saindo dela. Todo o resto da peça foi mantido em silêncio — fundo de uma cor, texto pequeno na lateral e a lista de recursos numa linha no rodapé — para a ideia tipográfica não disputar espaço com nada.',
+     e:'Cartaz A3 e versão para feed.',
+     g:['Conceitual','Produto','Tipografia']}
   ];
 
   var ov=document.getElementById('ov'),mX=document.getElementById('mX'),last=null;
   function open(i){
     var p=P[i],card=document.querySelector('.proj[data-p="'+i+'"]');
-    document.getElementById('mArt').innerHTML=card.querySelector('.p-art svg').outerHTML;
+    document.getElementById('mArt').innerHTML=card.querySelector('.p-art img').outerHTML;
     document.getElementById('mTitle').textContent=p.t;
     document.getElementById('mDesc').textContent=p.d;
     document.getElementById('mYear').textContent=p.y;
@@ -71,7 +63,7 @@
     document.getElementById('mRole').textContent=p.r;
     document.getElementById('mDeliv').textContent=p.e;
     var tg=document.getElementById('mTags');tg.innerHTML='';
-    p.g.forEach(function(g){var s=document.createElement('span');s.className='chip';s.textContent=g;tg.appendChild(s);});
+    p.g.forEach(function(g){var s=document.createElement('span');s.className='chip'+(g==='Conceitual'?' conc':'');s.textContent=g;tg.appendChild(s);});
     ov.classList.add('on');document.body.style.overflow='hidden';mX.focus();
   }
   function close(){ov.classList.remove('on');document.body.style.overflow='';if(last)last.focus();}
