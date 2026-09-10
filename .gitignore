@@ -1,0 +1,22 @@
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Node (caso você adicione ferramentas depois)
+node_modules/
+npm-debug.log*
+.env
+.env.local
+
+# Arquivos de trabalho do Adobe / fontes de arte
+*.psd
+*.ai
+*.indd
+*.sketch
+*.fig
