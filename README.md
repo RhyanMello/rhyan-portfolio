@@ -119,11 +119,18 @@ Três arquivos de código. Nenhuma dependência instalada.
 | Foto do Sobre | `assets/foto.jpg` | substitua o arquivo, mantendo o nome |
 | Arte de um projeto | `index.html` | `src` dentro de `<span class="p-art">` |
 | Texto do modal | `js/main.js` | array `P` |
-| Habilidades | `js/main.js` | array `SK` |
+| Habilidades de design | `js/main.js` | array `SK` |
+| Tecnologias (Front/Back/Dados/Ops) | `index.html` | seção `#dev`, blocos `<span class="tech">` |
+| Texto da VFA | `index.html` | seção `#dev` — é HTML direto, não passa pelo `js` |
+| Paleta da zona dev | `css/style.css` | bloco `.devzone{...}`, variáveis `--d-*` |
 | Telefone e e-mail | `index.html` | seção `#contato` — aparecem 2× cada |
 | Frases dos stickers | `index.html` | `<span class="float …">` no hero |
 
 ### Adicionar um projeto novo
+
+> A VFA **não** está no mural. Ela tem seção própria (`#dev`), escrita em HTML
+> direto, porque um projeto de sistema precisa de diagrama, tabela de arquitetura
+> e stack — coisas que não cabem num card de cartaz.
 
 1. Coloque a arte em `assets/`, com no máximo **1000px de largura** e qualidade
    **80**. É o que mantém o carregamento rápido.
@@ -168,11 +175,32 @@ seis linhas.
 | `--f-serif` | Instrument Serif | itálicos editoriais e citações |
 | `--f-mono` | Rubik Mono One | números e acentos tipográficos |
 | `--f-body` | Archivo | texto corrido e interface |
+| `--f-code` | JetBrains Mono | toda a zona dev: títulos, rótulos e nomes de função |
 
 As cinco vêm do Google Fonts — a **única** requisição externa do site. Se o
 carregamento falhar, cada uma cai para uma pilha de fallback declarada, com
 famílias visualmente distintas entre si, então o efeito de letras recortadas
 não desaparece por completo.
+
+### A zona dev
+
+A partir da faixa `> encerrando modo_design`, o site troca de linguagem visual de
+propósito: fundo escuro, contorno de 1px no lugar da sombra dura, tipografia
+monoespaçada e cantos marcados nos painéis. O menu acompanha, via
+`IntersectionObserver` em `js/main.js`.
+
+A paleta não é "cyberpunk genérico" — são as cores do `globals.css` do próprio
+sistema VFA (`#00E08F`, `#070B12`, `#1E6BFF`). Elas vivem em `--d-*`, escopadas
+dentro de `.devzone`, e **não** respondem ao tema claro/escuro: a zona é um
+ambiente fixo, não um tema.
+
+| Token | Hex | Uso |
+|---|---|---|
+| `--d-bg` | `#070B12` | fundo da zona |
+| `--d-surface` | `#0E141F` | painéis e tabelas |
+| `--d-line` | `#1C2534` | bordas e grade |
+| `--d-acc` | `#00E08F` | acento principal, cantos, links |
+| `--d-acc2` | `#1E6BFF` | acento secundário, caches, decisões |
 
 ### Tema claro e escuro
 

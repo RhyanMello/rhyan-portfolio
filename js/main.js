@@ -30,16 +30,6 @@
 
   /* ---------- projetos ---------- */
   var P=[
-    {t:'VFA — VIRTUAL FOOTBALL ASSOCIATION',y:'2026',c:'Desenvolvimento full-stack',
-     r:'Projeto solo — concepção, escopo, banco, back-end, front-end e identidade visual',
-     u:'https://github.com/firminodaborracharia/VFA---Virtual-Football-Association',
-     d:'Site oficial e sistema de gestão da VFA, uma liga amadora de futebol 6v6 no Roblox que eu organizo. Ele administra quatro ligas nacionais, os mata-matas de cada uma, Libertadores, Champions League e a decisão Intercontinental — com tabela, artilharia, assistências e recordes que se recalculam sozinhos a cada resultado registrado.\n\nA regra que sustenta o projeto inteiro é que estatística não se edita, se calcula: a fonte da verdade são as partidas, as escalações e os eventos, e todo o resto é cache recalculado por um motor de funções puras. Isso elimina de vez a classe de bug em que a classificação e as partidas discordam entre si.\n\nNada de regra fica preso no código. Pontuação, critérios de desempate e a ordem deles, número de clubes e turnos, quantos classificam para cada faixa da tabela, formato do mata-mata — tudo mora no banco e é editado pelo painel. No desempate por confronto direto entre três ou mais clubes, o sistema monta uma minitabela só com os jogos entre os envolvidos.',
-     e:'Nove páginas públicas, painel administrativo completo, API REST pública e administrativa, busca global, integração com a API pública do Roblox (avatar, display name e verificação, com cache e tolerância a falha), sistema de notícias com publicação agendada e motor de classificação coberto por 17 verificações automatizadas.',
-     k:[['FRONT-END','Next.js 16 (App Router)','React 19','TypeScript estrito','Tailwind CSS v4','Framer Motion','Recharts'],
-        ['BACK-END','Route Handlers','Auth.js v5','Discord OAuth2','Zod','RBAC em 3 camadas'],
-        ['DADOS','PostgreSQL','Drizzle ORM','migrations SQL versionadas','audit logs'],
-        ['INFRA','Vercel','cron diário','rate limiting','ESLint + Prettier']],
-     g:['Full-stack','Next.js','TypeScript','PostgreSQL','Auth','API REST']},
     {t:'EPA 2025',y:'2025',c:'Direção de Arte',r:'Direção de arte e cartaz',
      d:'Cartaz do Encontro de Projetos Acadêmicos do curso de Desenvolvimento de Sistemas. O conceito saiu da própria chamada do evento — "uma viagem ao universo de uma outra perspectiva" — então a peça sobrepõe carta celeste, diagrama renascentista e um estouro de luz no centro. O Homem Vitruviano ocupa o lugar do zero em 2025, que é o detalhe que amarra o tema do curso ao tema da imagem.',
      e:'Cartaz de divulgação e versão adaptada para stories, com data, local e chamada.',
@@ -102,6 +92,22 @@
     document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%4)*55+'ms';io.observe(el);});
   }else{
     document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in');});
+  }
+
+  /* ---------- menu acompanha o modo dev ---------- */
+  var navEl=document.querySelector('.nav');
+  var zones=[document.querySelector('.boundary'),document.getElementById('dev')].filter(Boolean);
+  if(navEl&&zones.length&&'IntersectionObserver' in window){
+    var inZone=[];
+    var io2=new IntersectionObserver(function(en){
+      en.forEach(function(x){
+        var i=inZone.indexOf(x.target);
+        if(x.isIntersecting&&i<0)inZone.push(x.target);
+        if(!x.isIntersecting&&i>=0)inZone.splice(i,1);
+      });
+      navEl.classList.toggle('dark',inZone.length>0);
+    },{rootMargin:'-72px 0px -90% 0px'});
+    zones.forEach(function(z){io2.observe(z);});
   }
 
   /* ---------- cursor ---------- */
